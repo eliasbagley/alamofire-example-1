@@ -8,6 +8,10 @@
 
 import Foundation
 
+private let ID_KEY = "id"
+private let TITLE_KEY = "title"
+private let BODY_KEY = "body"
+
 class Article {
   var id: Int?
   var title: String?
@@ -19,13 +23,13 @@ class Article {
   }
 
   func populateWithJSON(dictionary: JSONDictionary) {
-    if let id = dictionary["id"] as? Int {
+    if let id = dictionary[ID_KEY] as? Int {
       self.id = id
     }
-    if let title = dictionary["title"] as? String {
+    if let title = dictionary[TITLE_KEY] as? String {
       self.title = title
     }
-    if let body = dictionary["body"] as? String {
+    if let body = dictionary[BODY_KEY] as? String {
       self.body = body
     }
   }
@@ -33,9 +37,9 @@ class Article {
   func toJsonDictionary() -> JSONDictionary {
     var dict: JSONDictionary = [:]
 
-    if let id = id { dict["id"] = id }
-    if let title = title { dict["title"] = title }
-    if let body = body { dict["body"] = body }
+    if let id = id { dict[ID_KEY] = id }
+    if let title = title { dict[TITLE_KEY] = title }
+    if let body = body { dict[BODY_KEY] = body }
 
     return dict
   }
