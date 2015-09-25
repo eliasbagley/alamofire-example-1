@@ -41,8 +41,7 @@ class BaseRouter : URLRequestConvertible, APIConfiguration {
   }
 
   var baseUrl: String {
-    let baseUrl = ""
-    return baseUrl
+    return MockServer.sharedInstance.baseUrl
   }
 
   var URLRequest: NSURLRequest {

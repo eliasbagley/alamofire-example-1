@@ -18,6 +18,10 @@
 		BD6245901BB553EA002FF5E7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD62458D1BB553EA002FF5E7 /* Alamofire.framework */; };
 		BD6245911BB553EA002FF5E7 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD62458E1BB553EA002FF5E7 /* GCDWebServers.framework */; };
 		BD6245921BB553EA002FF5E7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD62458F1BB553EA002FF5E7 /* SwiftyJSON.framework */; };
+		BD6245951BB5A001002FF5E7 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6245941BB5A001002FF5E7 /* MockServer.swift */; };
+		BD6245981BB5A034002FF5E7 /* NSBundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6245971BB5A034002FF5E7 /* NSBundleExtensions.swift */; };
+		BD62459B1BB5A0BC002FF5E7 /* articles.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD62459A1BB5A0BC002FF5E7 /* articles.txt */; };
+		BD62459D1BB5A5FE002FF5E7 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD62459C1BB5A5FE002FF5E7 /* Cartography.framework */; };
 		BD6DE68B1B91787800580437 /* ArticleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DE68A1B91787800580437 /* ArticleRouter.swift */; };
 		BD6DE68D1B917B0600580437 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DE68C1B917B0600580437 /* APIManager.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +52,10 @@
 		BD62458D1BB553EA002FF5E7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		BD62458E1BB553EA002FF5E7 /* GCDWebServers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GCDWebServers.framework; path = Carthage/Build/iOS/GCDWebServers.framework; sourceTree = "<group>"; };
 		BD62458F1BB553EA002FF5E7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		BD6245941BB5A001002FF5E7 /* MockServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
+		BD6245971BB5A034002FF5E7 /* NSBundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBundleExtensions.swift; sourceTree = "<group>"; };
+		BD62459A1BB5A0BC002FF5E7 /* articles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = articles.txt; sourceTree = "<group>"; };
+		BD62459C1BB5A5FE002FF5E7 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 		BD6DE68A1B91787800580437 /* ArticleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleRouter.swift; sourceTree = "<group>"; };
 		BD6DE68C1B917B0600580437 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +68,7 @@
 				BD6245901BB553EA002FF5E7 /* Alamofire.framework in Frameworks */,
 				BD6245911BB553EA002FF5E7 /* GCDWebServers.framework in Frameworks */,
 				BD6245921BB553EA002FF5E7 /* SwiftyJSON.framework in Frameworks */,
+				BD62459D1BB5A5FE002FF5E7 /* Cartography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +85,7 @@
 		BD2B83A91B9173F700B1A623 = {
 			isa = PBXGroup;
 			children = (
+				BD62459C1BB5A5FE002FF5E7 /* Cartography.framework */,
 				BD62458D1BB553EA002FF5E7 /* Alamofire.framework */,
 				BD62458E1BB553EA002FF5E7 /* GCDWebServers.framework */,
 				BD62458F1BB553EA002FF5E7 /* SwiftyJSON.framework */,
@@ -97,6 +107,8 @@
 		BD2B83B41B9173F700B1A623 /* AlamofireExample */ = {
 			isa = PBXGroup;
 			children = (
+				BD6245991BB5A09A002FF5E7 /* Mock Data */,
+				BD6245961BB5A024002FF5E7 /* Extensions */,
 				BD2B83DC1B91747900B1A623 /* Network */,
 				BD2B83D71B91740000B1A623 /* Models */,
 				BD2B83B71B9173F700B1A623 /* AppDelegate.swift */,
@@ -148,8 +160,25 @@
 				BD2B83DD1B91748000B1A623 /* BaseRouter.swift */,
 				BD6DE68A1B91787800580437 /* ArticleRouter.swift */,
 				BD6DE68C1B917B0600580437 /* APIManager.swift */,
+				BD6245941BB5A001002FF5E7 /* MockServer.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		BD6245961BB5A024002FF5E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD6245971BB5A034002FF5E7 /* NSBundleExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BD6245991BB5A09A002FF5E7 /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				BD62459A1BB5A0BC002FF5E7 /* articles.txt */,
+			);
+			name = "Mock Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2B83BD1B9173F700B1A623 /* Main.storyboard in Resources */,
+				BD62459B1BB5A0BC002FF5E7 /* articles.txt in Resources */,
 				BD2B83C21B9173F700B1A623 /* LaunchScreen.xib in Resources */,
 				BD2B83BF1B9173F700B1A623 /* Images.xcassets in Resources */,
 			);
@@ -258,6 +288,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GCDWebServers.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
 			);
 			name = "Copy Carthage";
 			outputPaths = (
@@ -275,9 +306,11 @@
 			files = (
 				BD6DE68D1B917B0600580437 /* APIManager.swift in Sources */,
 				BD2B83DB1B91741400B1A623 /* Article.swift in Sources */,
+				BD6245951BB5A001002FF5E7 /* MockServer.swift in Sources */,
 				BD2B83BA1B9173F700B1A623 /* ViewController.swift in Sources */,
 				BD2B83B81B9173F700B1A623 /* AppDelegate.swift in Sources */,
 				BD6DE68B1B91787800580437 /* ArticleRouter.swift in Sources */,
+				BD6245981BB5A034002FF5E7 /* NSBundleExtensions.swift in Sources */,
 				BD2B83DE1B91748000B1A623 /* BaseRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
