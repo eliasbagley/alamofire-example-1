@@ -107,12 +107,12 @@
 		BD2B83B41B9173F700B1A623 /* AlamofireExample */ = {
 			isa = PBXGroup;
 			children = (
+				BD62459E1BB5AE2E002FF5E7 /* View Controllers */,
 				BD6245991BB5A09A002FF5E7 /* Mock Data */,
 				BD6245961BB5A024002FF5E7 /* Extensions */,
 				BD2B83DC1B91747900B1A623 /* Network */,
 				BD2B83D71B91740000B1A623 /* Models */,
 				BD2B83B71B9173F700B1A623 /* AppDelegate.swift */,
-				BD2B83B91B9173F700B1A623 /* ViewController.swift */,
 				BD2B83BB1B9173F700B1A623 /* Main.storyboard */,
 				BD2B83BE1B9173F700B1A623 /* Images.xcassets */,
 				BD2B83C01B9173F700B1A623 /* LaunchScreen.xib */,
@@ -179,6 +179,14 @@
 				BD62459A1BB5A0BC002FF5E7 /* articles.txt */,
 			);
 			name = "Mock Data";
+			sourceTree = "<group>";
+		};
+		BD62459E1BB5AE2E002FF5E7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD2B83B91B9173F700B1A623 /* ViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
